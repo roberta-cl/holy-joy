@@ -1,0 +1,31 @@
+/*Nav*/
+.bg-navbar {
+    background-color: #847266;
+}
+
+.nav-link{
+    color: #f5f0e5;
+    font-family: 'Poppins';
+}
+
+/*Search*/
+.form-control{
+    font-family: 'Poppins';
+    font-size: 12px;
+    width: 165px;
+}
+
+.btn-search{
+    color: #261e1d;
+    border-color: #261e1d;
+    transition: 0.5s;
+}
+
+.btn-search:hover{
+    color: #f5f0e5;
+    border-color: #f5f0e5;
+}
+
+.search-margin{
+    margin-right: 20px;
+}
