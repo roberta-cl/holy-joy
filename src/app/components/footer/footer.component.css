@@ -1,0 +1,30 @@
+.bg-footer {
+    background-color: #847266;
+}
+
+.text-footer{
+    color: #fef9f9;
+    font-family: 'Poppins';
+}
+
+.text-reset{
+    text-decoration: none;
+}
+
+.m-center{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+    align-items: center;
+}
+
+.m-center img:nth-child(2){
+    width: 180px;
+    object-fit: cover;
+}
+
+.m-center img{
+    width: 150px;
+    object-fit: cover;
+}
