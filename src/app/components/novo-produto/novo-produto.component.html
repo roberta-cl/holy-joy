@@ -1,0 +1,30 @@
+<div class="bg-np text-np">
+        <form #novoProdForm="ngForm" (ngSubmit)="onSubmit()" class="form-np">
+            <div class="mb-3">
+                <label for="nomeDoProduto">Nome do Produto</label>
+                <input #nomeInp="ngModel" id="nomeDoProduto" type="text" name="nomeDoProduto" [(ngModel)]="produto.nomeDoProduto" class="form-control" required />
+                <small *ngIf="nomeInp.touched && nomeInp.invalid" class="text-danger">O campo é inválido</small>
+            </div>
+            <div class="mb-3">
+                <label for="imagem">Imagem</label>
+                <input #imgInp="ngModel" id="imagem" type="url" name="imagem" [(ngModel)]="produto.imagem" class="form-control" required />
+                <small *ngIf="imgInp.touched && imgInp.invalid" class="text-danger">O campo é inválido</small>
+            </div>
+            <div class="mb-3">
+                <label for="preco">Preço</label>
+                <input #precoInp="ngModel" id="preco" type="number" name="preco" [(ngModel)]="produto.preco" class="form-control" required />
+                <small *ngIf="precoInp.touched && precoInp.invalid" class="text-danger">O campo é inválido</small>
+            </div>
+            <div class="mb-3">
+                <label for="categoria">Categoria</label>
+                <select #categoriaInp="ngModel" id="categoria" class="form-select" name="categoria" [(ngModel)]="produto.categoria" required>
+                    <option disabled>Selecione uma categoria</option>
+                    <option value="aneis">Anéis</option>
+                    <option value="colares">Colares</option>
+                    <option value="brincos">Brincos</option>
+                    <option value="pulseiras">Pulseiras</option>
+                </select>
+            </div>
+            <button class="btn btn-np" [disabled]="novoProdForm.invalid" style="margin-bottom: 20px">Criar produto</button>
+        </form> 
+</div>

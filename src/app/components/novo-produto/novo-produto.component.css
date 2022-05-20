@@ -1,0 +1,42 @@
+.bg-np {
+  background-color: #f5f0e5;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-np {
+  width: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.form-np input, select {
+  width: 400px;
+}
+
+.text-np {
+  font-family: "Poppins";
+}
+
+.btn-np {
+  color: #261e1d;
+  border-color: #261e1d;
+  transition: 0.2s;
+  width: 100%;
+}
+
+.btn-np:hover {
+  color: #261e1d;
+  background-color: #847266;
+  border-color: #847266;
+  opacity: 0.9;
+}
+
+.btn-np:disabled {
+  color: #f5f0e5;
+  background-color: #847266;
+  border-color: #847266;
+  opacity: 0.4;
+}
