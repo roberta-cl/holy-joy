@@ -1,0 +1,27 @@
+.bg-produtos{
+    background-color: #f5f0e5;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.cart-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.cart-icon span :nth-child(0) {
+    position: absolute;
+}
+
+
+.bi-cart{
+    font-size: 20px;
+    color: #261e1d;
+}
+
+.text-cart {
+    color: #261e1d;
+}

@@ -13,6 +13,8 @@ import { FeedbackComponent } from './components/feedback/feedback.component';
 import { NovoProdutoComponent } from './components/novo-produto/novo-produto.component';
 import { ErrorComponent } from './components/error/error.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ProdutoComponent } from './components/produto/produto/produto.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,12 +27,15 @@ import { FooterComponent } from './components/footer/footer.component';
     FeedbackComponent,
     NovoProdutoComponent,
     ErrorComponent,
-    FooterComponent
+    FooterComponent,
+    ProdutoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
