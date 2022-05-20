@@ -1,0 +1,11 @@
+<div class="card mb-5" style="width: 18rem;">
+    <img [src]="produto.imagem" class="card-img-top produto-img" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">{{produto.nomeDoProduto}}</h5>
+        <h3>
+            {{produto.preco | currency:'BRL'}}
+        </h3>
+        <button (click)="onAddCarrinho()" class="btn btn-produto">Adicionar ao carrinho</button>
+        <ng-content></ng-content>
+    </div>
+</div>

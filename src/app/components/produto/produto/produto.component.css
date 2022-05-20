@@ -1,0 +1,35 @@
+/* Button */
+.btn-produto {
+  width: 100%;
+  color: #f5f0e5;
+  border-color: #f5f0e5;
+  transition: 0.2s;
+  opacity: 0;
+}
+
+.btn-produto:hover {
+  color: #261e1d;
+  border-color: #261e1d;
+  opacity: 0.9;
+}
+
+.card {
+  font-family: "Poppins";
+}
+
+.card-body h5 {
+  font-size: 19px;
+  color: #261e1d;
+}
+
+.card-body h3 {
+  font-size: 16px;
+  color: #261e1d;
+  opacity: 0.5;
+}
+
+/* Img */
+.produto-img {
+    height: 270px;
+    object-fit: cover;
+}
