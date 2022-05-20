@@ -1,8 +1,10 @@
-export interface Produto {
-    imagem: string;
-    nomeDoProduto: string;
-    preco: number;
-    categoria: CategoriaProduto;
+export class Produto {
+    id!: number;
+    imagem!: string;
+    nomeDoProduto!: string;
+    emDestaque!: boolean;
+    preco!: number;
+    categoria!: CategoriaProduto;
 }
 
 export enum CategoriaProduto {

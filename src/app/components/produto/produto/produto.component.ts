@@ -22,6 +22,7 @@ export class ProdutoComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
+    
   }
 
 }
