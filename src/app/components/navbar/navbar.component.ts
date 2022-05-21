@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CadastroServiceService } from 'src/app/shared/services/cadastro-service/cadastro.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private cadastro: CadastroServiceService) { }
+
+  public usuario?: string;
+
 
   ngOnInit(): void {
+    let user = this.cadastro.getUsuario();
+    if(typeof(user.nome) === 'string' && user.name !== 'null') {
+      this.usuario = user.nome;
+    } else {
+      this.usuario = 'Log In';
+    }
+
   }
 
 }
