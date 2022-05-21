@@ -1,132 +1,141 @@
 {
- "produtos": [
-   {
-    "id": 1,
-    "imagem": "assets/img/pulseira1.jpg",
-    "nomeDoProduto": "Pulseira Silver",
-    "emDestaque": false,
-    "preco": 79,
-    "categoria": "CategoriaProduto.PULSEIRAS"
-  },
-  {
-    "id": 2,
-    "imagem": "assets/img/pulseira2.jpg",
-    "nomeDoProduto": "Pulseira Gold",
-    "emDestaque": true,
-    "preco": 79,
-    "categoria": "CategoriaProduto.PULSEIRAS"
-  },
-  {
-    "id": 3,
-    "imagem": "assets/img/pulseira3.jpg",
-    "nomeDoProduto": "Pulseira Key",
-    "emDestaque": true,
-    "preco": 79,
-    "categoria": "CategoriaProduto.PULSEIRAS"
-  },
-  {
-    "id": 4,
-    "imagem": "assets/img/pulseira4.jpg",
-    "nomeDoProduto": "Pulseira Hearts",
-    "emDestaque": true,
-    "preco": 79,
-    "categoria": "CategoriaProduto.PULSEIRAS"
-  },
-  {
-    "id": 5,
-    "imagem": "assets/img/pulseira5.jpg",
-    "nomeDoProduto": "Pulseira Elos",
-    "emDestaque": true,
-    "preco": 79,
-    "categoria": "CategoriaProduto.PULSEIRAS"
-  },
-  {
-    "id": 6,
-    "imagem": "assets/img/pulseira6.jpg",
-    "nomeDoProduto": "Pulseira Silver Chunky",
-    "emDestaque": true,
-    "preco": 79,
-    "categoria": "CategoriaProduto.PULSEIRAS"
-  },
-  {
-    "id": 7,
-    "imagem": "assets/img/pulseira7.jpg",
-    "nomeDoProduto": "Pulseira Caramel",
-    "emDestaque": true,
-    "preco": 79,
-    "categoria": "CategoriaProduto.PULSEIRAS"
-  },
-  {
-    "id": 8,
-    "imagem": "assets/img/pulseira8.jpg",
-    "nomeDoProduto": "Pulseira Pearl",
-    "emDestaque": true,
-    "preco": 79,
-    "categoria": "CategoriaProduto.PULSEIRAS"
-  },
-  {
-    "id": 9,
-    "imagem": "assets/img/brinco1.jpeg",
-    "nomeDoProduto": "Brinco Pearl",
-    "emDestaque": true,
-    "preco": 59,
-    "categoria": "j"
-  },
-  {
-    "id": 10,
-    "imagem": "assets/img/brinco2.jpeg",
-    "nomeDoProduto": "Brinco Star",
-    "emDestaque": true,
-    "preco": 59,
-    "categoria": "j"
-  },
-  {
-    "id": 11,
-    "imagem": "assets/img/brinco3.jpeg",
-    "nomeDoProduto": "Brinco Starry Night",
-    "emDestaque": true,
-    "preco": 59,
-    "categoria": "j"
-  },
-  {
-    "id": 12,
-    "imagem": "assets/img/brinco4.jpeg",
-    "nomeDoProduto": "Brinco Drops",
-    "emDestaque": true,
-    "preco": 59,
-    "categoria": "j"
-  },
-  {
-    "id": 13,
-    "imagem": "assets/img/colar1.jpg",
-    "nomeDoProduto": "Colar Heart",
-    "emDestaque": true,
-    "preco": 89,
-    "categoria": "CategoriaProduto.COLARES"
-  },
-  {
-    "id": 14,
-    "imagem": "assets/img/colar2.jpg",
-    "nomeDoProduto": "Colar Ballet",
-    "emDestaque": true,
-    "preco": 89,
-    "categoria": "CategoriaProduto.COLARES"
-  },
-  {
-    "id": 15,
-    "imagem": "assets/img/colar3.jpg",
-    "nomeDoProduto": "Colar Snake",
-    "emDestaque": true,
-    "preco": 89,
-    "categoria": "CategoriaProduto.COLARES"
-  },
-  {
-    "id": 16,
-    "imagem": "assets/img/colar4.jpg",
-    "nomeDoProduto": "Colar Gold",
-    "emDestaque": true,
-    "preco": 89,
-    "categoria": "CategoriaProduto.COLARES"
-  }
-]
+  "produtos": [
+    {
+      "id": 1,
+      "imagem": "assets/img/pulseira1.jpg",
+      "nomeDoProduto": "Pulseira Silver",
+      "emDestaque": false,
+      "preco": 79,
+      "categoria": "CategoriaProduto.PULSEIRAS"
+    },
+    {
+      "id": 2,
+      "imagem": "assets/img/pulseira2.jpg",
+      "nomeDoProduto": "Pulseira Gold",
+      "emDestaque": true,
+      "preco": 79,
+      "categoria": "CategoriaProduto.PULSEIRAS"
+    },
+    {
+      "id": 3,
+      "imagem": "assets/img/pulseira3.jpg",
+      "nomeDoProduto": "Pulseira Key",
+      "emDestaque": true,
+      "preco": 79,
+      "categoria": "CategoriaProduto.PULSEIRAS"
+    },
+    {
+      "id": 4,
+      "imagem": "assets/img/pulseira4.jpg",
+      "nomeDoProduto": "Pulseira Hearts",
+      "emDestaque": true,
+      "preco": 79,
+      "categoria": "CategoriaProduto.PULSEIRAS"
+    },
+    {
+      "id": 5,
+      "imagem": "assets/img/pulseira5.jpg",
+      "nomeDoProduto": "Pulseira Elos",
+      "emDestaque": true,
+      "preco": 79,
+      "categoria": "CategoriaProduto.PULSEIRAS"
+    },
+    {
+      "id": 6,
+      "imagem": "assets/img/pulseira6.jpg",
+      "nomeDoProduto": "Pulseira Silver Chunky",
+      "emDestaque": true,
+      "preco": 79,
+      "categoria": "CategoriaProduto.PULSEIRAS"
+    },
+    {
+      "id": 7,
+      "imagem": "assets/img/pulseira7.jpg",
+      "nomeDoProduto": "Pulseira Caramel",
+      "emDestaque": true,
+      "preco": 79,
+      "categoria": "CategoriaProduto.PULSEIRAS"
+    },
+    {
+      "id": 8,
+      "imagem": "assets/img/pulseira8.jpg",
+      "nomeDoProduto": "Pulseira Pearl",
+      "emDestaque": true,
+      "preco": 79,
+      "categoria": "CategoriaProduto.PULSEIRAS"
+    },
+    {
+      "id": 9,
+      "imagem": "assets/img/brinco1.jpeg",
+      "nomeDoProduto": "Brinco Pearl",
+      "emDestaque": true,
+      "preco": 59,
+      "categoria": "j"
+    },
+    {
+      "id": 10,
+      "imagem": "assets/img/brinco2.jpeg",
+      "nomeDoProduto": "Brinco Star",
+      "emDestaque": true,
+      "preco": 59,
+      "categoria": "j"
+    },
+    {
+      "id": 11,
+      "imagem": "assets/img/brinco3.jpeg",
+      "nomeDoProduto": "Brinco Starry Night",
+      "emDestaque": true,
+      "preco": 59,
+      "categoria": "j"
+    },
+    {
+      "id": 12,
+      "imagem": "assets/img/brinco4.jpeg",
+      "nomeDoProduto": "Brinco Drops",
+      "emDestaque": true,
+      "preco": 59,
+      "categoria": "j"
+    },
+    {
+      "id": 13,
+      "imagem": "assets/img/colar1.jpg",
+      "nomeDoProduto": "Colar Heart",
+      "emDestaque": true,
+      "preco": 89,
+      "categoria": "CategoriaProduto.COLARES"
+    },
+    {
+      "id": 14,
+      "imagem": "assets/img/colar2.jpg",
+      "nomeDoProduto": "Colar Ballet",
+      "emDestaque": true,
+      "preco": 89,
+      "categoria": "CategoriaProduto.COLARES"
+    },
+    {
+      "id": 15,
+      "imagem": "assets/img/colar3.jpg",
+      "nomeDoProduto": "Colar Snake",
+      "emDestaque": true,
+      "preco": 89,
+      "categoria": "CategoriaProduto.COLARES"
+    },
+    {
+      "id": 16,
+      "imagem": "assets/img/colar4.jpg",
+      "nomeDoProduto": "Colar Gold",
+      "emDestaque": true,
+      "preco": 89,
+      "categoria": "CategoriaProduto.COLARES"
+    }
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Tawan",
+      "sobrenome": "Silva",
+      "email": "tawan.tls43@gmail.com",
+      "senha": "cebola123"
+    }
+  ]
 }

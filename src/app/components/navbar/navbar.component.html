@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-navbar">
     <div class="container-fluid">
-        <div class="col-4"><a class="navbar-brand" href=""><img src="https://i.imgur.com/ZnorAHZ.png"
+        <div class="col-4"><a class="navbar-brand" [routerLink]="['/']" routerLinkActive="router-link-active" ><img src="https://i.imgur.com/ZnorAHZ.png"
                     alt="Logo Holy Joy" style="width: 80px;height: auto;" /></a></div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,7 +12,7 @@
                     <a class="nav-link" href="">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/produtos">Produtos</a>
+                    <a class="nav-link" [routerLink]="['/produtos']">Produtos</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/feedback">Feedback</a>
@@ -28,11 +28,15 @@
             </form>
             <ul class="navbar-nav mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="/login"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    <a class="nav-link" [routerLink]="['/login']" routerLinkActive="router-link-active" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                             fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
                             <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                        </svg> Log In</a>
+                        </svg>{{usuario}}</a>
                 </li>
+            </ul>
+            <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" [routerLink]="['/cadastro']" routerLinkActive="router-link-active" ><i class="bi bi-person-plus-fill"> Cadastre-se</i></a>
             </ul>
         </div>
     </div>
