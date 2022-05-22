@@ -1,0 +1,43 @@
+.bg-home {
+  background-color: #f5f0e5;
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+.banner-grid {
+  display: flex;
+  justify-content: center;
+}
+
+.banner-grid img {
+  width: 330px;
+  height: auto;
+}
+
+.picsum-img-wrapper img {
+  width: 100vw;
+  height: 500px;
+  object-fit: contain;
+}
+
+.shopnow {
+  font-family: "Poppins";
+  font-size: 18px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  text-decoration: none;
+  color: #847266;
+}
+
+.nav-link {
+    display: inline;
+}
+
+.nav-link:hover {
+  color: #c2b59b;
+  transition: 0.5s;
+}
+
+.container {
+  text-align: center;
+}

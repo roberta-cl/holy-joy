@@ -10,9 +10,10 @@ import { ProdutosComponent } from './components/produtos/produtos.component';
 import { NovoProdutoComponent } from './components/novo-produto/novo-produto.component';
 import { ErrorComponent } from './components/error/error.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { ProdutoComponent } from './components/produto/produto/produto.component';
+import { ProdutoComponent } from './components/produto/produto.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CadastroComponent } from './components/cadastro/cadastro.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { CadastroComponent } from './components/cadastro/cadastro.component';
     ErrorComponent,
     FooterComponent,
     ProdutoComponent,
-    CadastroComponent
+    CadastroComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

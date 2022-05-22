@@ -4,7 +4,7 @@
       "id": 1,
       "imagem": "assets/img/pulseira1.jpg",
       "nomeDoProduto": "Pulseira Silver",
-      "emDestaque": false,
+      "emDestaque": true,
       "preco": 79,
       "categoria": "CategoriaProduto.PULSEIRAS"
     },
@@ -136,6 +136,13 @@
       "sobrenome": "Silva",
       "email": "tawan.tls43@gmail.com",
       "senha": "cebola123"
+    },
+    {
+      "id": 2,
+      "nome": "Roberta",
+      "sobrenome": "Coelho",
+      "email": "robunye@gmail.com",
+      "senha": "12345678"
     }
   ]
 }

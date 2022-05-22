@@ -1,31 +1,43 @@
 /*Nav*/
 .bg-navbar {
-    background-color: #847266;
+  background-color: #847266;
 }
 
-.nav-link{
-    color: #f5f0e5;
-    font-family: 'Poppins';
+.nav-link {
+  color: #f5f0e5;
+  font-family: "Poppins";
+}
+
+.nav-link:hover {
+  color: #fef9f9;
+}
+
+.collapse {
+  justify-content: right;
+}
+
+.mid-links {
+  padding-left: 20px;
 }
 
 /*Search*/
-.form-control{
-    font-family: 'Poppins';
-    font-size: 12px;
-    width: 165px;
+.form-control {
+  font-family: "Poppins";
+  font-size: 12px;
+  width: 165px;
 }
 
-.btn-search{
-    color: #261e1d;
-    border-color: #261e1d;
-    transition: 0.5s;
+.btn-search {
+  color: #261e1d;
+  border-color: #261e1d;
+  transition: 0.5s;
 }
 
-.btn-search:hover{
-    color: #f5f0e5;
-    border-color: #f5f0e5;
+.btn-search:hover {
+  color: #f5f0e5;
+  border-color: #f5f0e5;
 }
 
-.search-margin{
-    margin-right: 20px;
+.search-margin {
+  margin-right: 20px;
 }
