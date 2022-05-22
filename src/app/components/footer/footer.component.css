@@ -28,3 +28,8 @@
     width: 150px;
     object-fit: cover;
 }
+
+.icons:hover {
+    transform: scale(1.4);
+    transition: 0.4s;
+}
