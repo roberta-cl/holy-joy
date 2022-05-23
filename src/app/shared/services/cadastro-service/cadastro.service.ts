@@ -62,4 +62,7 @@ export class CadastroServiceService {
   public setUser(id: string, nome: string, sobrenome: string, email: string): any {
     localStorage.setItem('nome', JSON.stringify({ id: id, nome: nome, sobrenome: sobrenome, email: email }))
   }
+  public buscar(cep:string){
+    return this.http.get(`https://viacep.com.br/ws/${cep}/json/`)
+  }
 }

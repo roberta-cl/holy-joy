@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { CepApi } from 'src/app/models/cep-api';
 import { DadosCliente } from 'src/app/models/dados-cliente';
 import { Produto } from 'src/app/models/produto';
 import { CarrinhoService } from 'src/app/shared/carrinho/carrinho.service';
 import { EfetivarCompraService } from 'src/app/shared/carrinho/efetivar-compra.service';
+import { CepServiceService } from 'src/app/shared/services/cep-service/cep-service.service';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -13,13 +15,15 @@ import Swal from 'sweetalert2';
 })
 export class CarrinhoComponent implements OnInit {
 
-  public itensCarrinho: Produto[] = [];
+    public itensCarrinho: Produto[] = [];
+    respostaApi: CepApi[] = [];
   idPedidoCompra?: number;
 
   constructor(
     private fb: FormBuilder,
     public carrinhoService: CarrinhoService,
-    private efetivarCompra: EfetivarCompraService
+    private efetivarCompra: EfetivarCompraService,
+    private cepService: CepServiceService
     ) { }
 
   compraForm = this.fb.group({
@@ -29,7 +33,7 @@ export class CarrinhoComponent implements OnInit {
     email: ['', [Validators.required, Validators.email, Validators.pattern("^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$")]],
     cpf: ['', [Validators.required, Validators.pattern("[0-9]{3}[\.][0-9]{3}[\.][0-9]{3}[\-][0-9]{2}")]],
     sexo: ['', [Validators.required]],
-    cep: ['', [Validators.required, Validators.pattern("[0-9]{5}-[0-9]{3}")]],
+    cep: ['', [Validators.required]],
     endereco: ['', [Validators.required]],
     numero: ['', [Validators.required]],
     bairro: ['', [Validators.required]],
@@ -38,6 +42,9 @@ export class CarrinhoComponent implements OnInit {
     celular: ['', [Validators.required, Validators.maxLength(16)]],
     formaPagamento: ['', [Validators.required]],
   })
+
+
+ 
 
   get nome() {
     return this.compraForm.get('nome');
@@ -84,6 +91,28 @@ export class CarrinhoComponent implements OnInit {
   get formaPagamento() {
     return this.compraForm.get('formaPagamento');
   }
+  
+  public consultaCep(valor: any, form: any) {
+    this.cepService.buscar(valor.target.value).subscribe((dados) => {
+      console.log(dados);
+      this.populaForm(dados,form)
+
+    })
+  
+  }
+
+  public populaForm(dados: any, form: any) {
+    form.patchValue({
+      cep: dados.cep,
+      endereco: dados.logradouro,
+      complemento: dados.complemento,
+      bairro: dados.bairro,
+      cidade: dados.localidade,
+      estado: dados.uf
+    })
+    console.log(form)
+  }
+
 
   public confirmarCompra(): void {
     if(this.compraForm.status === 'INVALID') {
@@ -135,6 +164,8 @@ export class CarrinhoComponent implements OnInit {
 
   ngOnInit(): void {
     this.itensCarrinho = this.carrinhoService.exibirItens();
+
+    
   }
 
   public adicionar(item: Produto): void {
@@ -144,4 +175,6 @@ export class CarrinhoComponent implements OnInit {
   public diminuir(item: Produto): void {
     this.carrinhoService.diminuirQuantidade(item);
   }
+
+    
 }
