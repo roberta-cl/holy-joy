@@ -1,15 +1,15 @@
 export class Produto {
-    id!: number;
-    imagem!: string;
-    nomeDoProduto!: string;
-    emDestaque!: boolean;
-    preco!: number;
-    categoria!: CategoriaProduto;
+  public id!: number;
+  public imagem!: string;
+  public nomeDoProduto!: string;
+  public preco!: number;
+  public categoria!: CategoriaProduto;
+  public quantidade!: number
 }
 
 export enum CategoriaProduto {
-    ANEIS = 'aneis',
-    COLARES = 'colares',
-    BRINCOS = 'brincos',
-    PULSEIRAS = 'pulseiras',
+  ANEIS = 'aneis',
+  COLARES = 'colares',
+  BRINCOS = 'brincos',
+  PULSEIRAS = 'pulseiras',
 }

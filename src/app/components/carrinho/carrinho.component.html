@@ -1,0 +1,180 @@
+<!-- *ngIf="carrinhoService.exibirItens().length; else carrinhoVazio" -->
+<!-- *ngFor="let item of itensCarrinho" -->
+
+
+<div class="formulario">
+  <div class="pedidos">
+  <div class="compra-container" >
+    <div class="img-pedido" *ngFor="let item of itensCarrinho">
+      <img [src]="item.imagem" >
+      <div class="cardBody" >
+          <span>{{item.nomeDoProduto}}</span>
+          <!-- (click)="diminuir(item)" -->
+          <div class="btnControl">
+            <button  type="button" (click)="diminuir(item)" class="btnPedido">-</button>
+          <!-- {{ item.quatidade}} --> <span>{{item.quantidade}}</span>
+          <!-- (click)="adicionar(item)" -->
+          <button  type="button" (click)="adicionar(item)" class="btnPedido">+</button>
+          </div>
+         <div class="pedidoValor">
+          <span>{{item.preco | currency: 'BRL'}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <form [formGroup]="compraForm" (ngSubmit)="confirmarCompra()">
+    <div class="totalCompra">
+      <span>Total do pedido: {{ carrinhoService.totalCarrinho() | currency : 'BRL' }}</span>
+    </div>
+    <div class="form-container">
+      <div class="mb-1">
+        <label class="form-label">Nome:<strong class="required"> *</strong> </label>
+        <input class="form-control" type="text" formControlName="nome">
+        <small class="text-danger" *ngIf="nome?.touched && nome?.invalid">
+          <span *ngIf="nome?.hasError('minlength') || nome?.hasError('required')">O mínimo de caracters é 3</span>
+          <span *ngIf="nome?.hasError('maxlength')">O máximo de caracters é 15</span>
+          <span *ngIf="nome?.hasError('pattern')">O nome é inválido</span>
+        </small>
+      </div>
+
+      <div class="mb-1">
+        <label class="form-label">Sobrenome:<strong class="required"> *</strong> </label>
+        <input class="form-control" type="text" formControlName="sobrenome">
+        <small class="text-danger" *ngIf="sobrenome?.touched && sobrenome?.invalid">
+          <span *ngIf="sobrenome?.hasError('minlength') || sobrenome?.hasError('required')">O mínimo de caracters é 3</span>
+          <span *ngIf="sobrenome?.hasError('maxlength')">O máximo de caracters é 15</span>
+          <span *ngIf="sobrenome?.hasError('pattern')">O sobrenome é inválido</span>
+        </small>
+      </div>
+
+      <div class="mb-1">
+        <label class="form-label">Nacimento:<strong class="required"> *</strong> </label>
+        <input class="form-control" type="date" id="nascimento" formControlName="nascimento">
+        <small class="text-danger" *ngIf="nascimento?.touched && nascimento?.invalid">
+          <span *ngIf="nascimento?.hasError('required')">Campo obrigatório</span>
+        </small>
+      </div>
+
+      <div class="mb-1">
+        <label class="form-label">Email:</label>
+        <input class="form-control" type="text" formControlName="email">
+        <small class="text-danger" *ngIf="email?.touched && email?.invalid">
+          <span *ngIf="email?.hasError('required')">O email é obrigatório</span>
+          <span *ngIf="email?.hasError('pattern') || email?.hasError('email')">O email é inválido</span>
+        </small>
+      </div>
+
+      <div class="form-container-info">
+        <div class="info-adicionais">
+          <span>Informações para envio</span>
+        </div>
+        <div class="mb-1">
+          <label class="form-label">CPF:<strong class="required"> *</strong> </label>
+          <input class="form-control" type="text" formControlName="cpf">
+          <small class="text-danger" *ngIf="cpf?.touched && cpf?.invalid">
+            <span *ngIf="cpf?.hasError('required')">O CPF é obrigatório</span>
+            <span *ngIf="cpf?.hasError('pattern')">CPF: 000.000.000-00</span>
+          </small>
+        </div>
+
+        <div class="select-form">
+          <label class="form-label">Sexo:<strong class="required"> *</strong></label>
+          <select id="sexo" class="form-control" formControlName="sexo">
+            <option value="" selected>Selecione</option>
+            <option value="F">Feminino</option>
+            <option value="M">Masculino</option>
+            <option value="Outro">Outro</option>
+          </select>
+          <small class="text-danger" *ngIf="sexo?.touched && sexo?.invalid">
+            <span *ngIf="sexo?.hasError('required')">O campo obrigatório</span>
+            <span *ngIf="sexo?.hasError('pattern')">O sexo inválido</span>
+          </small>
+        </div>
+
+        <div class="mb-1">
+          <label class="form-label">CEP:<strong class="required"> *</strong> </label>
+          <input class="form-control" type="text" formControlName="cep">
+          <small class="text-danger" *ngIf="cep?.touched && cep?.invalid">
+            <span *ngIf="cep?.hasError('required')">O cep é obrigatório</span>
+            <span *ngIf="cep?.hasError('pattern')">CEP: 53000-000</span>
+          </small>
+        </div>
+
+        <div class="mb-1">
+          <label class="form-label">Endereço:<strong class="required"> *</strong> </label>
+          <input class="form-control" type="text" formControlName="endereco">
+          <small class="text-danger" *ngIf="endereco?.touched && endereco?.invalid">
+            <span *ngIf="endereco?.hasError('required')">O endereço é obrigatório</span>
+          </small>
+        </div>
+
+        <div class="mb-1">
+          <label class="form-label">N°:<strong class="required"> *</strong> </label>
+          <input class="form-control" type="text" formControlName="numero">
+          <small class="text-danger" *ngIf="numero?.touched && numero?.invalid">
+            <span *ngIf="numero?.hasError('required')">O campo obrigatório</span>
+          </small>
+        </div>
+
+        <div class="mb-1">
+          <label class="form-label">Bairro:<strong class="required"> *</strong> </label>
+          <input class="form-control" type="text" formControlName="bairro">
+          <small class="text-danger" *ngIf="bairro?.touched && bairro?.invalid">
+            <span *ngIf="bairro?.hasError('required')">O campo obrigatório</span>
+          </small>
+        </div>
+
+        <div class="mb-1">
+          <label class="form-label">Complemento: </label>
+          <input class="form-control" type="text">
+        </div>
+
+        <div class="mb-1">
+          <label class="form-label">Cidade:<strong class="required"> *</strong> </label>
+          <input class="form-control" type="text" formControlName="cidade">
+          <small class="text-danger" *ngIf="cidade?.touched && cidade?.invalid">
+            <span *ngIf="cidade?.hasError('required')">O campo é obrigatório</span>
+          </small>
+        </div>
+
+        <div class="mb-1">
+          <label class="form-label">UF:<strong class="required"> *</strong> </label>
+          <input class="form-control" type="text" formControlName="estado">
+          <small class="text-danger" *ngIf="estado?.touched && estado?.invalid">
+            <span *ngIf="estado?.hasError('required')">O estado é obrigatório</span>            </small>
+        </div>
+
+        <div class="mb-1">
+          <label class="form-label">DDD+Teleone: </label>
+          <input class="form-control" type="text">
+        </div>
+
+        <div class="mb-1">
+          <label class="form-label">DDD+Celular:<strong class="required"> *</strong> </label>
+          <input class="form-control" type="text" formControlName="celular">
+          <small class="text-danger" *ngIf="celular?.touched && celular?.invalid">
+            <span *ngIf="celular?.hasError('required')">O celular é obrigatório</span>
+            <span *ngIf="celular?.hasError('maxlength')">O execesso de caracters</span>
+          </small>
+        </div>
+        <div class="select-form">
+          <label class="form-label">Forma de pagamento:<strong class="required"> *</strong></label>
+          <select id="sexo" class="form-control" formControlName="formaPagamento">
+            <option value="" selected>Selecione</option>
+            <option value="credito">Credito</option>
+            <option value="debito">Debito</option>
+            <option value="boleto">Boleto</option>
+          </select>
+          <small class="text-danger" *ngIf="formaPagamento?.touched && formaPagamento?.invalid">
+            <span *ngIf="formaPagamento?.hasError('required')">O formaPagamento é obrigatório</span>
+          </small>
+        </div>
+      </div>
+
+      <div class="btn-form">
+        <button class="btnConfirmar">Confirmar</button>
+      </div>
+    </div>
+  </form>
+</div>

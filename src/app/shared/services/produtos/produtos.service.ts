@@ -14,7 +14,7 @@ export class ProdutosService {
   public getProdutos(): Observable<Produto[]> {
     return this.http.get<Produto[]>(`${URL_API}/produtos?emDestaque=true`)
     .pipe(
-      retry(10),
+      retry(5),
       map((response: Produto[]) => {
         return response;
       })

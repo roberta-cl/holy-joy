@@ -5,7 +5,7 @@
         <h3>
             {{produto.preco | currency:'BRL'}}
         </h3>
-        <button (click)="onAddCarrinho()" class="btn btn-produto">Adicionar ao carrinho</button>
+        <button (click)="addCarrinho(produto)" class="btn btn-produto">Adicionar ao carrinho</button>
         <ng-content></ng-content>
     </div>
 </div>

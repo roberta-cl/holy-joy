@@ -1,0 +1,295 @@
+.formulario {
+  /* width: 100%;
+  height: 100%;
+  align-items: center; */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2%;
+  background-color: #f5f0e5;
+  margin: 80px 100px;
+  font-family: 'Poppins';
+}
+
+.form-container {
+  max-width: 900px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10%;
+  padding: 10px;
+  background-color: white;
+}
+
+.form-container {
+  border-width: 5px;
+  border-style: solid;
+  border-image:
+    linear-gradient(to right,
+      #c2ab9c 29%, #c1a492 87%, #b49c8deb 29%) 1 100%;
+  border-image-slice: 1;
+  border-right: none;
+  border-left: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px 2px #615d5d87;
+}
+
+.form-control {
+  width: 250px;
+  height: 30px;
+  border-radius: 3px;
+}
+
+.form-label {
+  margin-right: 10px;
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+.select-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#sexo {
+  padding: 0px 0px 0px 10px;
+}
+
+.required {
+  color: crimson;
+}
+
+.text-danger span {
+  font-size: 12px;
+}
+
+.form-container-info {
+  max-width: 900px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 5%;
+  padding: 10px;
+  background-color: white;
+  border-width: 5px;
+  border-style: solid;
+  border-image:
+    linear-gradient(to right,
+      #e4ccbeeb 29%, #dfccbf 67%, #e4ccbeeb 29%) 1 100%;
+  border-image-slice: 1;
+  border-right: none;
+  border-left: none;
+  border-bottom: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  box-shadow: 1px 1px 5px 2px #615d5d87;
+}
+
+.info-adicionais {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.info-adicionais span {
+  color: #5a4d44;
+  font-weight: 500;
+  border-bottom: 1.5px solid #c2ab9c;
+}
+
+.btn-form {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnConfirmar {
+  padding: 5px 80px;
+}
+
+.btnConfirmar:enabled {
+  color: white;
+  font-weight: 600;
+  margin-top: 2em;
+  border: none;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 1em;
+  background: linear-gradient(to right, #dab79f, #bcb0a8, #9c7860);
+  cursor: pointer;
+}
+
+.btnConfirmar:disabled {
+  color: white;
+  font-weight: 600;
+  margin-top: 2em;
+  border: none;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 1em;
+  background: linear-gradient(to right, #dcd5d1, #f1ece9);
+}
+
+.pedidos {
+  height: 700px;
+  border-width: 5px;
+  border-top: 0;
+  border-style: solid;
+  border-image:
+    linear-gradient(to bottom,
+      #c2ab9c 29%, #a18979 87%) 1 100%;
+  background: #fafafa;
+  box-shadow: 1px 1px 8px 1px #615d5d87;
+  overflow-y: auto;
+}
+
+.compra-container {
+  height: auto;
+  background: linear-gradient(90deg,
+      #c2ab9c 8%,
+      #dabda9 51%,
+      #d9c7bb 84%);
+  border-width: 5px;
+  border-style: solid;
+  border-image: linear-gradient(to right, #c2ab9c 29%, #d9c7bb 87%);
+  border-image-slice: 1;
+  border-right: none;
+  border-left: none;
+  border-top: none;
+}
+
+.img-pedido {
+  height: 150px;
+  width: 350px;
+  display: flex;
+  align-items: center;
+}
+
+.img-pedido img {
+  min-width: 120px;
+  height: 80%;
+  border-radius: 10px;
+  margin-left: 15px;
+  transition: 0.5s;
+}
+
+.img-pedido img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.pedido-titulo {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+
+.cardBody {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardBody span {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.btnControl {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnControl span {
+  font-size: 15px;
+  margin: 9px 8px 0px 8px;
+  font-weight: 600;
+}
+
+.btnPedido {
+  margin-top: 5px;
+  min-width: 23px;
+  max-height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-weight: 600;
+  background: linear-gradient(to right, #bcb0a8, #9c7860);
+}
+
+.pedidoValor {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-right: 10px;
+}
+
+.totalCompra {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  margin-bottom: 20px;
+  margin-top: 20px;
+
+}
+
+.totalCompra span {
+  background: linear-gradient(to right, #bcb0a8, #9c7860);
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+@media screen and (max-width: 1500px) {
+  .pedidos {
+    width: auto;
+    height: 160px;
+    display: flex;
+    overflow-x: auto;
+  }
+
+  .compra-container {
+    display: flex;
+  }
+
+  .img-pedido {
+    border-width: 5px;
+    border-style: solid;
+    border-image: linear-gradient(to right, #c2ab9c 29%, #d9c7bb 87%);
+    border-image-slice: 1;
+    /* border-right: none; */
+    border-left: none;
+    border-bottom: none;
+    border-top: none;
+  }
+
+  .totalCompra span {
+    width: 150px
+  }
+
+  .totalCompra {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+  }
+}

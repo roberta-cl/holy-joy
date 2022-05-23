@@ -41,3 +41,41 @@
 .search-margin {
   margin-right: 20px;
 }
+
+
+.cart-icon {
+  display: flex;
+  align-items: center;
+  margin-right: 50px;
+  cursor: pointer;
+}
+
+.alternativeIcon {
+  position: absolute;
+  font-size: 9px;
+  color: #f5f0e5;
+  top: 12px;
+  right: calc(260px / 2);
+  font-weight: 600;
+  border: 1px solid #f5f0e5;
+  border-radius: 600px;
+  padding: 1px 6px;
+}
+
+.alterativePosition  {
+    position: absolute;
+  font-size: 9px;
+  color: #f5f0e5;
+  top: 12px;
+  right: calc(100px * 3 - 40px);
+  font-weight: 600;
+  border: 1px solid #f5f0e5;
+  border-radius: 600px;
+  padding: 1px 6px;
+}
+
+.bi-cart {
+  font-size: 25px;
+  color: #f5f0e5;
+}
+
