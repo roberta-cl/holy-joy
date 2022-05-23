@@ -131,18 +131,25 @@
   ],
   "usuarios": [
     {
-      "id": 1,
+      "id": "1",
       "nome": "Tawan",
       "sobrenome": "Silva",
       "email": "tawan.tls43@gmail.com",
       "senha": "cebola123"
     },
     {
-      "id": 2,
+      "id": "2",
       "nome": "Roberta",
       "sobrenome": "Coelho",
       "email": "robunye@gmail.com",
       "senha": "12345678"
+    },
+    {
+      "id": "3",
+      "nome": "Gabriel",
+      "sobrenome": "Moraes",
+      "email": "biel.moraes2701@gmail.com",
+      "senha": "patinhoazul123"
     }
   ]
 }

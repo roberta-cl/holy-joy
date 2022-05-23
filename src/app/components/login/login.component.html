@@ -1,0 +1,28 @@
+<div class="formulario">
+    <form [formGroup]="loginForm" (ngSubmit)="fazerLogin()" >
+        <div class="form-container">
+            <div class="mb-1">
+                <label class="form-label">Email:</label>
+                <input class="form-control" type="text" formControlName="email">
+                <small class="text-danger" *ngIf="email?.touched && email?.invalid">
+                  <span *ngIf="email?.hasError('email') || email?.hasError('required') || email?.hasError('pattern')">O email
+                    inválido</span>
+                  <span *ngIf="email?.hasError('maxlength')">O máximo de caracters é 35</span>
+                </small>
+              </div>
+              <div class="mb-1">
+                <label class="form-label">Senha: </label>
+                <div class="eye">
+                  <input class="form-control" id="senha" type="password" formControlName="senha">
+                  <span class="lnr lnr-eye" (click)="mostrarSenha()"></span>
+                </div>
+                <small class="text-danger" *ngIf="senha?.touched && email?.invalid">
+                  <span *ngIf="senha?.hasError('required')">A senha é obrigatória</span>
+                  <span *ngIf="senha?.hasError('minlength')">O mínimo de caracters é 8</span>
+                  <span *ngIf="senha?.hasError('maxlength')">O máximo de caracters é 16</span>
+                </small>
+              </div>
+              <button [disabled]="loginForm.invalid">Entrar</button>
+        </div>
+    </form>
+</div>

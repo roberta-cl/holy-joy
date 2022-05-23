@@ -18,3 +18,21 @@ export function cadastroSuccess(): void {
     title: 'Cadastro feito com sucesso'
   })
  }
+
+ export function loginSuccess(): void {
+  const LoginSuccess = Swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: 2000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.addEventListener('mouseenter', Swal.stopTimer)
+      toast.addEventListener('mouseleave', Swal.resumeTimer)
+    }
+  })
+  LoginSuccess.fire({
+    icon: 'success',
+    title: 'Login feito com sucesso'
+  })
+ }
