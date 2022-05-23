@@ -6,8 +6,8 @@
         <input class="form-control" type="text" formControlName="nome">
         <small class="text-danger " *ngIf="nome?.touched && nome?.invalid">
           <span *ngIf="nome?.hasError('required')">O nome é obrigatório</span>
-          <span *ngIf="nome?.hasError('minlength')">O mínimo de caracters é 3</span>
-          <span *ngIf="nome?.hasError('maxlength')">O máximo de caracters é 10</span>
+          <span *ngIf="nome?.hasError('minlength')">O mínimo de caracteres é 3</span>
+          <span *ngIf="nome?.hasError('maxlength')">O máximo de caracteres é 10</span>
         </small>
       </div>
 
@@ -16,18 +16,18 @@
         <input class="form-control" type="text" formControlName="sobrenome">
         <small class="text-danger" *ngIf="sobrenome?.touched && sobrenome?.invalid">
           <span *ngIf="sobrenome?.hasError('required')">O sobrenome é obrigatório</span>
-          <span *ngIf="sobrenome?.hasError('minlength')">O mínimo de caracters é 3</span>
-          <span *ngIf="sobrenome?.hasError('maxlength')">O máximo de caracters é 10</span>
+          <span *ngIf="sobrenome?.hasError('minlength')">O mínimo de caracteres é 3</span>
+          <span *ngIf="sobrenome?.hasError('maxlength')">O máximo de caracteres é 10</span>
         </small>
       </div>
 
       <div class="mb-1">
-        <label class="form-label">Email:</label>
+        <label class="form-label">E-mail: </label>
         <input class="form-control" type="text" formControlName="email">
         <small class="text-danger" *ngIf="email?.touched && email?.invalid">
           <span *ngIf="email?.hasError('email') || email?.hasError('required') || email?.hasError('pattern')">
             O email é inválido</span>
-          <span *ngIf="email?.hasError('maxlength')">O máximo de caracters é 35</span>
+          <span *ngIf="email?.hasError('maxlength')">O máximo de caracteres é 35</span>
         </small>
       </div>
 
@@ -39,8 +39,8 @@
         </div>
         <small class="text-danger" *ngIf="senha?.touched && email?.invalid">
           <span *ngIf="senha?.hasError('required')">A senha é obrigatória</span>
-          <span *ngIf="senha?.hasError('minlength')">O mínimo de caracters é 8</span>
-          <span *ngIf="senha?.hasError('maxlength')">O máximo de caracters é 16</span>
+          <span *ngIf="senha?.hasError('minlength')">O mínimo de caracteres é 8</span>
+          <span *ngIf="senha?.hasError('maxlength')">O máximo de caracteres é 16</span>
         </small>
       </div>
       <button [disabled]="cadastroForm.invalid">Criar conta</button>
