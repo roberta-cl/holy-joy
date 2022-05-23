@@ -1,0 +1,42 @@
+.bg-feedback {
+    background-color: #f5f0e5;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .form-feedback {
+    width: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  .form-feedback input {
+    width: 400px;
+  }
+  
+  .text-feedback {
+    font-family: "Poppins";
+  }
+  
+  .btn-feedback {
+    color: #261e1d;
+    border-color: #261e1d;
+    transition: 0.2s;
+    width: 100%;
+  }
+  
+  .btn-feedback:hover {
+    color: #261e1d;
+    background-color: #847266;
+    border-color: #847266;
+    opacity: 0.9;
+  }
+  
+  .btn-feedback:disabled {
+    color: #f5f0e5;
+    background-color: #847266;
+    border-color: #847266;
+    opacity: 0.4;
+  }
