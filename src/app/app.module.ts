@@ -15,7 +15,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CadastroComponent } from './components/cadastro/cadastro.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
-import { UsuarioComponent } from './components/usuario/usuario.component';
 import { CarrinhoComponent } from './components/carrinho/carrinho.component';
 import { FeedbackUsuarioComponent } from './components/feedback/feedback.component';
 
@@ -31,7 +30,6 @@ import { FeedbackUsuarioComponent } from './components/feedback/feedback.compone
     CadastroComponent,
     HomeComponent,
     LoginComponent,
-    UsuarioComponent,
     CarrinhoComponent,
     FeedbackUsuarioComponent
   ],
