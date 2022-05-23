@@ -145,6 +145,22 @@
       "estado": "dasdas",
       "formaPagamento": "credito",
       "id": 1
+    },
+    {
+      "nome": "fabio",
+      "sobrenome": "lima",
+      "nascimento": "1980-05-12",
+      "email": "fabio.lima07@gmail.com",
+      "cpf": "082.571.047-28",
+      "sexo": "Outro",
+      "cep": "22720-400",
+      "endereco": "Avenida dos Mananciais",
+      "numero": "1155",
+      "bairro": "Taquara",
+      "cidade": "Rio de Janeiro",
+      "estado": "RJ",
+      "formaPagamento": "debito",
+      "id": 2
     }
   ],
   "usuarios": [
@@ -175,6 +191,20 @@
       "sobrenome": "Silva ",
       "email": "tawa.tlserro@gmail.com",
       "senha": "40028922"
+    },
+    {
+      "id": "zCfT7J-",
+      "nome": "fabio",
+      "sobrenome": "lima",
+      "email": "fabio@gmail.com",
+      "senha": "12356465"
+    },
+    {
+      "id": "03n4A96",
+      "nome": "Fabio",
+      "sobrenome": "Lima",
+      "email": "fabiolima@gmail.com",
+      "senha": "12345676"
     }
   ]
 }

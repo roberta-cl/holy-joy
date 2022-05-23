@@ -23,7 +23,7 @@
     </div>
   </div>
 </div>
-  <form [formGroup]="compraForm" (ngSubmit)="confirmarCompra()">
+  <form #f="ngForm" [formGroup]="compraForm" (ngSubmit)="confirmarCompra()">
     <div class="totalCompra">
       <span>Total do pedido: {{ carrinhoService.totalCarrinho() | currency : 'BRL' }}</span>
     </div>
@@ -94,7 +94,7 @@
 
         <div class="mb-1">
           <label class="form-label">CEP:<strong class="required"> *</strong> </label>
-          <input class="form-control" type="text" formControlName="cep">
+          <input class="form-control" id="cep" name="cep" (blur)="consultaCep($event, compraForm)"  type="text" formControlName="cep">
           <small class="text-danger" *ngIf="cep?.touched && cep?.invalid">
             <span *ngIf="cep?.hasError('required')">O cep é obrigatório</span>
             <span *ngIf="cep?.hasError('pattern')">CEP: 53000-000</span>
@@ -103,7 +103,7 @@
 
         <div class="mb-1">
           <label class="form-label">Endereço:<strong class="required"> *</strong> </label>
-          <input class="form-control" type="text" formControlName="endereco">
+          <input class="form-control"  type="text" formControlName="endereco">
           <small class="text-danger" *ngIf="endereco?.touched && endereco?.invalid">
             <span *ngIf="endereco?.hasError('required')">O endereço é obrigatório</span>
           </small>
@@ -132,7 +132,7 @@
 
         <div class="mb-1">
           <label class="form-label">Cidade:<strong class="required"> *</strong> </label>
-          <input class="form-control" type="text" formControlName="cidade">
+          <input class="form-control" id="cidade" name="cidade" type="text" formControlName="cidade">
           <small class="text-danger" *ngIf="cidade?.touched && cidade?.invalid">
             <span *ngIf="cidade?.hasError('required')">O campo é obrigatório</span>
           </small>
@@ -140,7 +140,7 @@
 
         <div class="mb-1">
           <label class="form-label">UF:<strong class="required"> *</strong> </label>
-          <input class="form-control" type="text" formControlName="estado">
+          <input class="form-control" id="estado" name="estado" ngModel="" type="text" formControlName="estado">
           <small class="text-danger" *ngIf="estado?.touched && estado?.invalid">
             <span *ngIf="estado?.hasError('required')">O estado é obrigatório</span>            </small>
         </div>
