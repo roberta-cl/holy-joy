@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CadastroComponent } from './components/cadastro/cadastro.component';
 import { CarrinhoComponent } from './components/carrinho/carrinho.component';
 import { ErrorComponent } from './components/error/error.component';
+import { FeedbackUsuarioComponent } from './components/feedback/feedback.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'novo-produto', component: NovoProdutoComponent },
   { path: 'produtos', component: ProdutosComponent },
   { path: 'cadastro', component: CadastroComponent },
+  { path: 'feedback', component: FeedbackUsuarioComponent },
   { path: 'login', component: LoginComponent },
   { path: 'usuario', component: UsuarioComponent},
   { path: 'carrinho', component: CarrinhoComponent},

@@ -1,0 +1,45 @@
+<div class="bg-feedback">
+    <form [formGroup]="feedbackForm" (ngSubmit)="onSubmit()" class="m-1">
+        <div class="mb-3">
+            <label for="nome" class="form-label">Nome*</label>
+            <input formControlName="nome"id="nome" type="text" class="form-control">
+            <small class="text-danger" *ngIf="nome?.touched && nome?.invalid">
+                <span *ngIf="nome?.hasError('required')">O nome é obrigatório.</span>
+                <span *ngIf="nome?.hasError('minlength')">O minimo sáo 3 carcteres</span>
+    
+            </small>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">E-mail*</label>
+            <input formControlName="email" id="email"type="email" class="form-control">
+            <small class="text-danger" *ngIf="email?.touched && email?.invalid">
+                <span *ngIf="email?.hasError('required')">O e-mail é obrigatório</span>
+                <span *ngIf="email?.hasError('email')">O e-mail é inválido</span>
+            </small>
+        </div>
+        <div class="mb-3">
+            <label for="comentario" class="form-label">Comentário</label>
+            <textarea formControlname="comentario" id="comentário" rows="3" class="form-control">
+            </textarea>
+            <small class="text-danger" *ngIf="comentario?.touched && comentario?.invalid">
+                <span *ngIf="comentario?.hasError('required')">O comentário é obrigatário</span>
+                <span *ngIf="comentario?.hasError('maxlength')">Não ultrapasse 200 caracteres</span>
+            </small>
+        </div>
+        <div class="mb-3">
+            <label for="nota" class="form-label">Nota</label>
+            <input formControlName="nota" id="nota"type="number" class="form-control"step="0.1">
+            <small class="text-danger" *ngIf="nota?.touched && nota?.invalid">
+                <span *ngIf="nota?.hasError('required')">A nota é obrigatória</span>
+                <span *ngIf="nota?.hasError('min')">Nota mínima:0</span>
+                <span *ngIf="nota?.hasError('max')">Nota máxima: 10</span>
+            </small>
+        </div>
+        
+        <button class="btn btn-feedback"[disabled]="feedbackForm.invalid" style="margin-bottom:20px">Enviar Feedback</button>
+    
+       
+    </form>
+    
+</div>
+
