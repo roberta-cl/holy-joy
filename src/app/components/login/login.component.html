@@ -5,8 +5,8 @@
                 <label class="form-label">Email:</label>
                 <input class="form-control" type="text" formControlName="email">
                 <small class="text-danger" *ngIf="email?.touched && email?.invalid">
-                  <span *ngIf="email?.hasError('email') || email?.hasError('required') || email?.hasError('pattern')">O email
-                    inválido</span>
+                  <span *ngIf="email?.hasError('email') || email?.hasError('required') || email?.hasError('pattern')">
+                    O email é inválido</span>
                   <span *ngIf="email?.hasError('maxlength')">O máximo de caracters é 35</span>
                 </small>
               </div>

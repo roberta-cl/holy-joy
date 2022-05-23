@@ -25,11 +25,7 @@
                 </div>
                 <div class="row">
                     <div class="col" *ngFor="let produto of produtos | slice:0:8">
-                        <app-produto [dadoProduto]="produto" (onCarrinho)="addCarrinho($event)">
-                            <p *ngIf="produtoNoCarrinho(produto)" class="text-muted">
-                                *Produto no carrinho
-                            </p>
-                        </app-produto>
+                        <app-produto [dadoProduto]="produto"></app-produto>
                     </div>
                 </div>
             </div>

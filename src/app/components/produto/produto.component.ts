@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
 import { Produto } from 'src/app/models/produto';
+import { CarrinhoService } from 'src/app/shared/carrinho/carrinho.service';
 
 @Component({
   selector: 'app-produto',
@@ -9,20 +10,18 @@ import { Produto } from 'src/app/models/produto';
 export class ProdutoComponent implements OnInit, OnDestroy {
 
   @Input('dadoProduto') produto!: Produto;
-  @Output('onCarrinho') onCarrinho = new EventEmitter<Produto>();
 
-  constructor() { }
+  constructor(private carrinhoService: CarrinhoService) { }
 
   ngOnDestroy(): void {
-  }
 
-  onAddCarrinho() {
-    alert("Produto adicionado no carrinho!");
-    this.onCarrinho.emit(this.produto);
+  }
+  addCarrinho(produto: Produto) {
+    this.carrinhoService.incluirItem(produto);
   }
 
   ngOnInit(): void {
-    
+
   }
 
 }

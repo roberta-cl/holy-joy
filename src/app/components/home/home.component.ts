@@ -16,8 +16,6 @@ export class HomeComponent implements OnInit {
   produtos: Produto[] = [];
   carrinho: Produto[] = [];
 
-  @Output('onCarrinho') onCarrinho = new EventEmitter<Produto>();
-
   addCarrinho(produto: Produto) {
     this.carrinho.push(produto);
   }

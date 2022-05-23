@@ -14,16 +14,6 @@ export class ProdutosComponent implements OnInit {
   produtos: Produto[] = [];
   carrinho: Produto[] = [];
 
-  @Output('onCarrinho') onCarrinho = new EventEmitter<Produto>();
-
-  addCarrinho(produto: Produto) {
-    this.carrinho.push(produto);
-  }
-
-  produtoNoCarrinho(produto: Produto): boolean {
-    return this.carrinho.includes(produto);
-  }
-
   ngOnInit(): void {
     this.produtosService.getProdutos().subscribe(produto => {
       console.log(produto);

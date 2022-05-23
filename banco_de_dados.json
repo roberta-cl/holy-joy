@@ -129,6 +129,24 @@
       "categoria": "CategoriaProduto.COLARES"
     }
   ],
+  "pedidos": [
+    {
+      "nome": "Tawan",
+      "sobrenome": "Silva",
+      "nascimento": "0001-08-06",
+      "email": "taewan.tls43@gam.com",
+      "cpf": "555.555.555-50",
+      "sexo": "F",
+      "cep": "53610-010",
+      "endereco": "asdasdas",
+      "numero": "50",
+      "bairro": "dasdas",
+      "cidade": "asdas",
+      "estado": "dasdas",
+      "formaPagamento": "credito",
+      "id": 1
+    }
+  ],
   "usuarios": [
     {
       "id": "1",
@@ -150,6 +168,13 @@
       "sobrenome": "Moraes",
       "email": "biel.moraes2701@gmail.com",
       "senha": "patinhoazul123"
+    },
+    {
+      "id": "5vCP-1a",
+      "nome": "Tawan ",
+      "sobrenome": "Silva ",
+      "email": "tawa.tlserro@gmail.com",
+      "senha": "40028922"
     }
   ]
 }
