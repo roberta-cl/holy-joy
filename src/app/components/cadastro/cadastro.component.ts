@@ -55,6 +55,7 @@ export class CadastroComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log(this.cadastro.getUsuarioAPI())
   }
 
 }
