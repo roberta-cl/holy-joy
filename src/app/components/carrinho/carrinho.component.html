@@ -32,8 +32,8 @@
         <label class="form-label">Nome:<strong class="required"> *</strong> </label>
         <input class="form-control" type="text" formControlName="nome">
         <small class="text-danger" *ngIf="nome?.touched && nome?.invalid">
-          <span *ngIf="nome?.hasError('minlength') || nome?.hasError('required')">O mínimo de caracters é 3</span>
-          <span *ngIf="nome?.hasError('maxlength')">O máximo de caracters é 15</span>
+          <span *ngIf="nome?.hasError('minlength') || nome?.hasError('required')">O mínimo de caracteres é 3</span>
+          <span *ngIf="nome?.hasError('maxlength')">O máximo de caracteres é 15</span>
           <span *ngIf="nome?.hasError('pattern')">O nome é inválido</span>
         </small>
       </div>
@@ -42,26 +42,26 @@
         <label class="form-label">Sobrenome:<strong class="required"> *</strong> </label>
         <input class="form-control" type="text" formControlName="sobrenome">
         <small class="text-danger" *ngIf="sobrenome?.touched && sobrenome?.invalid">
-          <span *ngIf="sobrenome?.hasError('minlength') || sobrenome?.hasError('required')">O mínimo de caracters é 3</span>
-          <span *ngIf="sobrenome?.hasError('maxlength')">O máximo de caracters é 15</span>
+          <span *ngIf="sobrenome?.hasError('minlength') || sobrenome?.hasError('required')">O mínimo de caracteres é 3</span>
+          <span *ngIf="sobrenome?.hasError('maxlength')">O máximo de caracteres é 15</span>
           <span *ngIf="sobrenome?.hasError('pattern')">O sobrenome é inválido</span>
         </small>
       </div>
 
       <div class="mb-1">
-        <label class="form-label">Nacimento:<strong class="required"> *</strong> </label>
+        <label class="form-label">Nascimento:<strong class="required"> *</strong> </label>
         <input class="form-control" type="date" id="nascimento" formControlName="nascimento">
         <small class="text-danger" *ngIf="nascimento?.touched && nascimento?.invalid">
-          <span *ngIf="nascimento?.hasError('required')">Campo obrigatório</span>
+          <span *ngIf="nascimento?.hasError('required')">O campo é obrigatório</span>
         </small>
       </div>
 
       <div class="mb-1">
-        <label class="form-label">Email:</label>
+        <label class="form-label">E-mail:</label>
         <input class="form-control" type="text" formControlName="email">
         <small class="text-danger" *ngIf="email?.touched && email?.invalid">
-          <span *ngIf="email?.hasError('required')">O email é obrigatório</span>
-          <span *ngIf="email?.hasError('pattern') || email?.hasError('email')">O email é inválido</span>
+          <span *ngIf="email?.hasError('required')">O e-mail é obrigatório</span>
+          <span *ngIf="email?.hasError('pattern') || email?.hasError('email')">O e-mail é inválido</span>
         </small>
       </div>
 
@@ -87,8 +87,8 @@
             <option value="Outro">Outro</option>
           </select>
           <small class="text-danger" *ngIf="sexo?.touched && sexo?.invalid">
-            <span *ngIf="sexo?.hasError('required')">O campo obrigatório</span>
-            <span *ngIf="sexo?.hasError('pattern')">O sexo inválido</span>
+            <span *ngIf="sexo?.hasError('required')">O campo é obrigatório</span>
+            <span *ngIf="sexo?.hasError('pattern')">O sexo é inválido</span>
           </small>
         </div>
 
@@ -96,7 +96,7 @@
           <label class="form-label">CEP:<strong class="required"> *</strong> </label>
           <input class="form-control" id="cep" name="cep" (blur)="consultaCep($event, compraForm)"  type="text" formControlName="cep">
           <small class="text-danger" *ngIf="cep?.touched && cep?.invalid">
-            <span *ngIf="cep?.hasError('required')">O cep é obrigatório</span>
+            <span *ngIf="cep?.hasError('required')">O CEP é obrigatório</span>
             <span *ngIf="cep?.hasError('pattern')">CEP: 53000-000</span>
           </small>
         </div>
@@ -113,7 +113,7 @@
           <label class="form-label">N°:<strong class="required"> *</strong> </label>
           <input class="form-control" type="text" formControlName="numero">
           <small class="text-danger" *ngIf="numero?.touched && numero?.invalid">
-            <span *ngIf="numero?.hasError('required')">O campo obrigatório</span>
+            <span *ngIf="numero?.hasError('required')">O campo é obrigatório</span>
           </small>
         </div>
 
@@ -121,7 +121,7 @@
           <label class="form-label">Bairro:<strong class="required"> *</strong> </label>
           <input class="form-control" type="text" formControlName="bairro">
           <small class="text-danger" *ngIf="bairro?.touched && bairro?.invalid">
-            <span *ngIf="bairro?.hasError('required')">O campo obrigatório</span>
+            <span *ngIf="bairro?.hasError('required')">O campo é obrigatório</span>
           </small>
         </div>
 
@@ -155,19 +155,19 @@
           <input class="form-control" type="text" formControlName="celular">
           <small class="text-danger" *ngIf="celular?.touched && celular?.invalid">
             <span *ngIf="celular?.hasError('required')">O celular é obrigatório</span>
-            <span *ngIf="celular?.hasError('maxlength')">O execesso de caracters</span>
+            <span *ngIf="celular?.hasError('maxlength')">O execesso de caracteres</span>
           </small>
         </div>
         <div class="select-form">
           <label class="form-label">Forma de pagamento:<strong class="required"> *</strong></label>
           <select id="sexo" class="form-control" formControlName="formaPagamento">
             <option value="" selected>Selecione</option>
-            <option value="credito">Credito</option>
-            <option value="debito">Debito</option>
+            <option value="credito">Crédito</option>
+            <option value="debito">Débito</option>
             <option value="boleto">Boleto</option>
           </select>
           <small class="text-danger" *ngIf="formaPagamento?.touched && formaPagamento?.invalid">
-            <span *ngIf="formaPagamento?.hasError('required')">O formaPagamento é obrigatório</span>
+            <span *ngIf="formaPagamento?.hasError('required')">A forma de pagamento é obrigatória</span>
           </small>
         </div>
       </div>
